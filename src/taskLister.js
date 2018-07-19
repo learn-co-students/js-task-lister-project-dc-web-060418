@@ -1,6 +1,16 @@
-class TaskLister {
-  // your solution here
-  render() {
-    return (`<h1>Welcome to Flavortown</h1>`);
+function createTaskLister() {
+  
+  return class {
+    constructor(){
+      this.lists = []
+      this.listsinitialized = false
+    }
+    addList(list){
+      this.lists.push(list)
+    }
+    removeList(list){
+      this.lists = this.lists.filter((e)=>(e!=list))
+      
+    }
   }
 }
